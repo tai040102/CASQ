@@ -1,13 +1,5 @@
-# CASQ: Enhancing Human-Object Interaction Detection via Supplementary Semantic Information for Interaction Queries
-In this study, we propose a novel method that utilizes supplementary semantic information to generate dynamic interaction queries per image. Our method involves embedding object categories into vector space using a pre-trained CLIP model and incorporating attention information from the semantic features, which enhances its representation and query capabilities.
 
-<p align="center"><img width="100%" src="./imgs/Framework.png"></p>
-
-Our proposed CASQ significantly improves the accuracy and performance of HOI detection, accounting for variations in context and characteristics of the interaction.
-<p align="center"><img width="60%" src="./imgs/Visualize.jpg"></p>
-
-
-## 1. Environmental Setup
+## Environmental Setup
 We experimented three modules in colab environmental 
 ```bash
 !pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
@@ -25,7 +17,7 @@ We experimented three modules in colab environmental
 ```
 
 
-## 2. How to Train/Test
+## How to Train/Test
 For both training and testing, you can either run on a single GPU or multiple GPUs.
 ```bash
 # Train from epoch 1
@@ -91,7 +83,7 @@ For testing, you can use your own trained weights and pass the group name and ru
 In order to use our provided weights, you can download the weights provided below.
 Then, pass the directory of the downloaded file (for example, to test our pre-trained weights on the vcoco dataset, we put the downloaded weights under the directory checkpoints/vcoco.pth) to the 'resume' argument.
 
-## 4. Results
+## Results
 Here, we provide results of V-COCO Scenario 1 (60.88 mAP) and Scenario2 (65.69 mAP).
 This is obtained "without" applying any priors on the scores (see [iCAN](https://github.com/vt-vl-lab/iCAN/blob/83a363cfc80bf62538d5faf6ec17c871686c0635/lib/ult/apply_prior.py)).
 
